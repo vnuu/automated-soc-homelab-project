@@ -1,6 +1,6 @@
 # Automated SOC Homelab
 
-**An end-to-end SOC alert triage pipeline that integrates Windows 10 telemetry (via Sysmon) with cloud-hosted SIEM, SOAR, and case management platforms to automate Mimikatz alert detection, enrichment, and escalation to an analyst.**
+**An end-to-end SOC alert triage pipeline that integrates Windows 10 telemetry (via Sysmon) with a cloud-hosted SIEM (Wazuh), SOAR (Shuffle), and a case management platform (TheHive) to automate Mimikatz alert detection, enrichment, and escalation to an analyst.**
 
 ---
 
