@@ -706,7 +706,7 @@ This project deployed a Windows 10 VM to simulate credential dumping using Mimik
 - Practical detection and response to credential dumping techniques  
 
 **Credits:**
-- Credits to Benjamin Delpy for creating ![mimikatz](https://github.com/ParrotSec/mimikatz)
+- Credits to Benjamin Delpy for creating [mimikatz](https://github.com/ParrotSec/mimikatz)
 
 
 
