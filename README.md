@@ -705,6 +705,8 @@ This project deployed a Windows 10 VM to simulate credential dumping using Mimik
 - End-to-end SIEM-SOAR pipeline implementation for SOC automation  
 - Practical detection and response to credential dumping techniques  
 
+**Credits:**
+- Credits to Benjamin Delpy for creating ![mimikatz](https://github.com/ParrotSec/mimikatz)
 
 
 
