@@ -519,8 +519,8 @@ cat /var/ossec/logs/archives/archives.log | grep -i mimikatz
 - Set the `level` to define the severity of the event.  
 - Inside the rule, use `<if_group>` to specify the group of logs it applies to. In this case, it would be `sysmon_event1`.
 - Add a `<field>` to specify the condition. Use the `win.eventdata.originalFileName` field and a case-insensitive regular expression `(pcre2)` to match `mimikatz.exe`. ( `win.eventdata.originalFileName` is used because it reflects the original name of the binary, which stays the same even if the attacker renames the file.)
-- Write a short and clear `<description>` to indicate what the rule detects — for example, "Mimikatz usage detected".
-- Add a `<mitre>` tag and include the relevant MITRE ATT&CK technique ID — for Mimikatz, this is T1003 (Credential Dumping).
+- Write a short and clear `<description>` to indicate what the rule detects. For example, "Mimikatz usage detected".
+- Add a `<mitre>` tag and include the relevant MITRE ATT&CK technique ID. For Mimikatz, this is T1003 (Credential Dumping).
 - Ensure the rule block is structured and indented properly.
 - The rule block for Mimikatz should look like this:
 ```xml
