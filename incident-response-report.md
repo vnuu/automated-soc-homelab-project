@@ -98,7 +98,7 @@ Sysmon collected endpoint telemetry and forwarded the logs to the Wazuh Manager.
 
 A custom detection rule (**Rule ID 100002**) detected **Mimikatz** execution. The rule inspected the `win.eventdata.originalFileName` field in Sysmon Event ID 1 (Process Creation).
 
-![Figure 1. Wazuh Security Alerts Dashboard](<img width="1553" height="875" alt="444570221-51ae2604-c8a9-4e50-b3c3-17ab851ee1e7" src="https://github.com/user-attachments/assets/b0892851-c072-48f9-bfc6-4f12323ab1e5" />)
+<img width="1011" height="341" alt="image" src="https://github.com/user-attachments/assets/3d48cdf7-b6d7-4ef9-8876-044938e27ad5" />
 
 The `originalFileName` field contains the internal file metadata. The field does not depend on the file name on the disk. Because of this, the rule can detect Mimikatz even if the attacker renames the executable.
 
