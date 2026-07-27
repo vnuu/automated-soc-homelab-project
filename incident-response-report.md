@@ -98,8 +98,6 @@ Sysmon collected endpoint telemetry and forwarded the logs to the Wazuh Manager.
 
 A custom detection rule (**Rule ID 100002**) detected **Mimikatz** execution. The rule inspected the `win.eventdata.originalFileName` field in Sysmon Event ID 1 (Process Creation).
 
-<img width="1011" height="341" alt="image" src="https://github.com/user-attachments/assets/3d48cdf7-b6d7-4ef9-8876-044938e27ad5" />
-
 The `originalFileName` field contains the internal file metadata. The field does not depend on the file name on the disk. Because of this, the rule can detect Mimikatz even if the attacker renames the executable.
 
 ---
@@ -151,9 +149,9 @@ Shuffle extracted the SHA256 hash from the Wazuh alert and submitted the hash to
 
 VirusTotal returned reputation information for the detected file. The response included the file name, file type, SHA256 hash, and file metadata.
 
-The workflow used this information to enrich the alert before it created a case in **TheHive**.
+Analysis reported that **65 security vendors classified the file as malicious**. No vendors classified the file as suspicious or harmless. This result supported the analyst's assessment that the detected executable was Mimikatz and confirmed the Wazuh alert as a true positive.
 
-The additional threat intelligence helped the SOC analyst verify the alert and confirm it as a **true positive**.
+These results supported the analyst's assessment that the executable was malicious and confirmed that the Wazuh alert was a **true positive**.
 
 ## VirusTotal Summary
 
@@ -163,6 +161,7 @@ The additional threat intelligence helped the SOC analyst verify the alert and c
 | File Name | mimikatz.exe |
 | File Type | PE32+ executable (x86-64) |
 | SHA256 | 61C0810A23580CF492A6BA4F7654566108331E7A4134C968C2D6A05261B2D8A1 |
+| Detection Result | 65 Malicious, 0 suspicious, 7 undetected |
 | Classification | HackTool / Credential Dumper |
 
 ---
@@ -212,7 +211,7 @@ The recommendations in this report will improve protection against credential-ac
 
 ---
 
-# Appendix A – Detection Rule (Wazuh Custom Rule)
+# Appendix A – Detection Rule (Wazuh)
 
 ```xml
 <rule id="100002" level="15">
@@ -229,7 +228,7 @@ The recommendations in this report will improve protection against credential-ac
 
 ---
 
-# Appendix B – Tools and Platforms Used
+# Appendix B – Tools Used
 
 | Function | Tool / Platform |
 |----------|-----------------|
